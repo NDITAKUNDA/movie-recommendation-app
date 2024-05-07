@@ -1,0 +1,17 @@
+<div class="accordion" id="accordionExample">
+  <div class="accordion-item" *ngFor="let review of reviews, let i = index" >
+    <h2 class="accordion-header">
+      <button class="accordion-button" type="button" data-bs-toggle="collapse" [attr.data-bs-target]="'#collapse'+i"
+        aria-expanded="false" [attr.aria-controls]="'collapse'+i">
+        <i class="bi bi-star"></i> <b>{{review.rating}}/10 </b> Review {{i + 1}}
+      </button>
+    </h2>
+    <div id="collapse{{i}}" class="accordion-collapse collapse hide" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        <p>{{review.description}}</p>
+        <p class="blockquote-footer">{{review.author}}</p>
+        <p><i>{{review.people}}</i></p>
+      </div>
+    </div>
+  </div>
+</div>
