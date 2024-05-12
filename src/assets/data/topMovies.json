@@ -1,0 +1,12 @@
+[
+    {
+      "imageUrl": "../../../assets/image/lion.jpg",
+      "title": "Movie #1 Title",
+      "description": "This is a breif description of the movie"
+    },
+    {
+      "imageUrl": "../../../assets/image/lion.jpg",
+      "title": "Movie #2 Title",
+      "description": "This is a breif description of the movie"
+    }
+]

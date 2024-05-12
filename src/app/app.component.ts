@@ -11,6 +11,7 @@ import { SearchComponent } from './components/search/search.component';
 import { DetailsReviewsComponent } from './components/details-reviews/details-reviews.component';
 import { DetailsActorsComponent } from './components/details-actors/details-actors.component';
 import { HeaderDirective } from './directives/header.directive';
+import { HttpClientModule } from '@angular/common/http';
 
 @Component({
   selector: 'app-root',
@@ -26,7 +27,8 @@ import { HeaderDirective } from './directives/header.directive';
     NotAuthorizeComponent,
     SearchComponent,
     DetailsActorsComponent,
-    HeaderDirective
+    HeaderDirective,
+    HttpClientModule
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'

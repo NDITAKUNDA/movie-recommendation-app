@@ -1,0 +1,20 @@
+[
+    {
+        "rating": 9.5,
+        "description": "This is what the review is all about",
+        "author": "Review Author",
+        "people": "230 of 300 people found this useful"
+    },
+    {
+        "rating": 8,
+        "description": "This is what the review is all about",
+        "author": "Review Author",
+        "people": "230 of 300 people found this useful"
+    },
+    {
+        "rating": 5.5,
+        "description": "This is what the review is all about",
+        "author": "Review Author",
+        "people": "230 of 300 people found this useful"
+    }
+]

@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { RouterLink, RouterOutlet } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { HeaderDirective } from '../../directives/header.directive';
+import { HttpClient } from '@angular/common/http';
 
 
 @Component({
@@ -11,53 +12,28 @@ import { HeaderDirective } from '../../directives/header.directive';
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
-export class HomeComponent {
+export class HomeComponent implements OnInit {
 
-  fanFavourites: any[] = [
-    {
-      imageUrl: '../../../assets/image/lion.jpg',
-      title: 'Movie Title',
-      actors: 'Movie Actors',
-      year: '2023',
-      rating: 9.5,
-      trophy: '1'      
-    },
-    {
-      imageUrl: '../../../assets/image/lion.jpg',
-      title: 'Movie #2 Title',
-      actors: 'Movie #2 Actors',
-      year: '2023',
-      rating: 9.5,
-      trophy: '1'      
-    },
-    {
-      imageUrl: '../../../assets/image/lion.jpg',
-      title: 'Movie #3 Title',
-      actors: 'Movie #3 Actors',
-      year: '2023',
-      rating: 9.5,
-      trophy: '1'      
-    },
-    {
-      imageUrl: '../../../assets/image/lion.jpg',
-      title: 'Movie #4 Title',
-      actors: 'Movie #4 Actors',
-      year: '2023',
-      rating: 9.5,
-      trophy: '1'      
-    }
-  ]
+  constructor(private httpClient: HttpClient) {
 
-  topMovies: any[] = [
-    {
-      imageUrl: '../../../assets/image/lion.jpg',
-      title: 'Movie #1 Title',
-      description: 'This is a breif description of the movie'
-    },
-    {
-      imageUrl: '../../../assets/image/lion.jpg',
-      title: 'Movie #2 Title',
-      description: 'This is a breif description of the movie'
-    }
-  ]
+  }
+  ngOnInit(): void {
+    this.getFanFavourites();
+    this.getTopMovies();
+  }
+
+  fanFavourites: any[] = [];
+  topMovies: any[] = [];
+
+  getFanFavourites() {
+    this.httpClient.get<any[]>('assets/data/fanFavourites.json').subscribe((data:any[]) => {
+      this.fanFavourites = data;
+    })
+  }
+
+  getTopMovies() {
+    this.httpClient.get<any[]>('assets/data/topMovies.json').subscribe((data:any[]) => {
+      this.topMovies= data;
+    })
+  }
 }

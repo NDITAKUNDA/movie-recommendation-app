@@ -1,0 +1,27 @@
+[
+    {
+        "imageUrl": "../../../assets/image/actor.jpg",
+        "name": "Movie #1 Name",
+        "rating": 9.5
+    },
+    {
+        "imageUrl": "../../../assets/image/actor.jpg",
+        "name": "Movie #2 Name",
+        "rating": 9.5
+    },
+    {
+        "imageUrl": "../../../assets/image/actor.jpg",
+        "name": "Movie #3 Name",
+        "rating": 9.5
+    },
+    {
+        "imageUrl": "../../../assets/image/actor.jpg",
+        "name": "Movie #4 Name",
+        "rating": 9.5
+    },
+    {
+        "imageUrl": "../../../assets/image/actor.jpg",
+        "name": "Movie #5 Name",
+        "rating": 9.5
+    }
+]
